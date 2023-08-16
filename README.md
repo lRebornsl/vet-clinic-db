@@ -109,6 +109,7 @@ No tests here.
 
 - [ ] **Create new tables.**
 - [ ] **Add more data.**
+- [ ] **Create more queries.**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
