@@ -26,3 +26,15 @@ COMMIT;
 BEGIN;
 DELETE FROM animals;
 ROLLBACK;
+
+BEGIN;
+DELETE FROM animals
+WHERE date_of_birth > '2022-01-01';
+SAVEPOINT first;
+UPDATE animals
+SET weight_kg = weight_kg * -1;
+ROLLBACK TO first;
+UPDATE animals
+SET weight_kg = weight_kg * -1
+WHERE weight_kg < 0;
+COMMIT;
